@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-angular-templatecache",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Laravel Elixir Angular-TemplateCache Extension",
   "main": "index.js",
   "scripts": {
