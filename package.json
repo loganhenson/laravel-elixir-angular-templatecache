@@ -23,9 +23,8 @@
     "url": "https://github.com/loganhenson/laravel-elixir-angular-templatecache/issues"
   },
   "dependencies": {
-    "gulp": "^3.8.9",
+    "gulp": "^3.8.10",
     "gulp-angular-templatecache": "^1.4.2",
-    "gulp-insert": "^0.4.0",
-    "gulp-notify": "^2.0.0"
+    "gulp-insert": "^0.4.0"
   }
 }
