@@ -5,9 +5,11 @@ var insert = require('gulp-insert');
 
 elixir.extend("angulartemplatecache", function(module, from, to, wrap) {
 
+    var taskName = "angulartemplatecache from " + from;
+
     if(wrap){
 
-        gulp.task("angulartemplatecache", function() {
+        gulp.task(taskName, function() {
             gulp.src(from)
                 .pipe(templateCache({module: module}))
                 .pipe(insert.wrap('(function(angular) {', '})(angular);'))
@@ -16,7 +18,7 @@ elixir.extend("angulartemplatecache", function(module, from, to, wrap) {
 
     } else{
 
-        gulp.task("angulartemplatecache", function() {
+        gulp.task(taskName, function() {
             gulp.src(from)
                 .pipe(templateCache({module: module}))
                 .pipe(gulp.dest(to));
@@ -24,7 +26,7 @@ elixir.extend("angulartemplatecache", function(module, from, to, wrap) {
 
     }
 
-    this.registerWatcher("angulartemplatecache", from);
-    return this.queueTask("angulartemplatecache");
+    this.registerWatcher(taskName, from);
+    return this.queueTask(taskName);
 
 });
